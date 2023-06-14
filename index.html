@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy hoạch động</title>
+    <style>
+        h1 {
+
+            text-align: center;
+            background-color: #0095ff99;
+            color: #fff;
+        }
+
+        .bai {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 25px
+        }
+
+        .text {
+            font-family: Consolas;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Công thức một số bài quy hoạch động nổi tiếng</h1>
+    <!-- Bài 1 -->
+    <p>
+    <div class="bai">Bài 1: Dãy con tăng dài nhất (LIS)</div>
+    <div class="text">
+        Khởi tạo dp[i] = 1 ∀ i ∈ [0,n-1] <br />
+        Công thức quy hoạch: <br />
+        <div class="text">
+            dp[i] = max(dp[i],dp[j]+1) <br />
+            j ∈ [0,i-1], a[i] > a[j]
+        </div>
+    </div>
+    <!-- Bài 2 -->
+    </p>
+    <p>
+    <div class="bai">Bài 2: Bài toán cái balo 0-1</div>
+    <div class="text">
+        Ta có: <br />
+        + w[i] là trọng lượng đồ vật thứ i <br />
+        + v[i] là giá trị của đồ vật thứ i <br />
+    </div>
+    </p>
+    <!-- Bài 3 -->
+    </p>
+    <p>
+    <div class="bai">Bài 3: Dãy con có tổng bằng S</div>
+    <div class="text">
+        Khởi tạo dp[i] = false ∀ i ∈ [0,S] <br />
+        dp[i] = true nếu có thể chọn ra tập con có tổng bằng i <br />
+        => Kết quả bài toán là dp[S] <br />
+        Cơ sở: dp[0] = true <br />
+        Công thức quy hoạch:
+        <div class="text">
+            dp[j] = dp[j-a[i]] <br />
+            i ∈ [0,n-1] <br />
+            j ∈ [S -> a[i]] <br />
+        </div>
+    </div>
+    </p>
+    <!-- Bài 4 -->
+    </p>
+    <p>
+    <div class="bai">Bài 4: Xâu con đối xứng dài nhất</div>
+    <div class="text">
+        dp[i][j] là xâu con bắt đầu từ i và kết thúc ở j <br />
+        Khởi tạo dp[i][i] = true ∀ i ∈ [1,s.size()] <br />
+        1. Nếu s[i] != s[j] thì dp[i][j] = false <br />
+        2. Nếu s[i] == s[j] và dp[i+1][j-1] == true => dp[i][j] = true <br />
+        ==> dp[i][j] = dp[i+1][j-1] && s[i] == s[j] <br /> <br />
+        3. Nếu chiều dài của xâu i -> j là 2 thì ta chỉ quan tâm tới s[i] == s[j] <br />
+        gọi l = j-i+1 <br />
+        ==> dp[i][j] = l == 2 && s[i] == s[j] <br />
+        Vậy công thức tổng quát là: <br />
+        ┌───────────────────────────────────────────────────────────────────────┐ <br />
+        | dp[i][j] = (dp[i+1][j-1] && s[i] == s[j]) || (l == 2 && s[i] == s[j]) | <br />
+        └───────────────────────────────────────────────────────────────────────┘ <br />
+
+
+    </div>
+    </p>
+</body>
+
+</html>
