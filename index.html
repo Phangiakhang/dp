@@ -24,11 +24,64 @@
             font-size: 20px;
             padding: 20px;
         }
+
+        h2 {
+            color: #000;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: right;
+        }
+
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0095ff99;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            flex: 1;
+
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #000;
+            background-color: #eee;
+            font-weight: bold;
+        }
+
+        .active {
+            background-color: blue;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
     <h1>Công thức một số bài quy hoạch động nổi tiếng</h1>
+    <h3>Tác giả: Phan Gia Khang</h3>
+    <ul class="navbar">
+        <li><a href="https://phangiakhang.github.io/home/" class="active"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li><a href="https://phangiakhang.github.io/lythuyet/"><i class="fa fa-book"></i> Lý thuyết</a></li>
+        <li><a href="https://phangiakhang.github.io/baitap/"><i class="fa fa-pencil"></i> Bài tập</a></li>
+        <li><a href="https://phangiakhang.github.io/dethithu/"><i class="fa fa-file-text-o"></i> Đề thi thử</a></li>
+        <li><a href="https://phangiakhang.github.io/dp/"><i class="fa fa-cogs"></i> Quy hoạch động</a></li>
+        <li><a href="https://phangiakhang.github.io/lienhe/"><i class="fa fa-envelope"></i> Liên hệ</a></li>
+    </ul>
     <!-- Bài 1 -->
     <p>
     <div class="bai">Bài 1: Dãy con tăng dài nhất (LIS)</div>
